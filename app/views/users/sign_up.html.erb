@@ -1,5 +1,5 @@
 <h1>會員註冊</h1>
-<%= form_with(model: @user, url: sign_out_users_path, method: "post", local: true) do |f| %>
+<%= form_with(model: @user, url: users_path, method: "post", local: true) do |f| %>
   <div class="field">
     <%= f.label :account, "帳號" %>
     <%= f.text_field :account %>
