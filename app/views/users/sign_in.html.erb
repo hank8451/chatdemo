@@ -1,0 +1,12 @@
+
+<%= form_with(model: @user, url: sign_out_users_path, method: "post", local: true) do |f| %>
+  <div class="field">
+    <%= f.label :account, "帳號" %>
+    <%= f.text_field :account %>
+  </div>
+  <div class="field">
+    <%= f.label :password, "密碼" %>
+    <%= f.password_field :password %>
+  </div>
+  <%= f.submit "登入" %>
+<% end %>
