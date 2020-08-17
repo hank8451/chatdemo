@@ -15,8 +15,3 @@ require("channels")
 //
 const images = require.context('../images', true)
 const imagePath = (name) => images(name, true)
-
-let submitBtn = document.querySelector('#submit');
-console.log(document);
-require("../scripts");
-// require("./channel.js")

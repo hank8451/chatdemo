@@ -1,3 +1,5 @@
-<h1>歡迎來到<%= @channel.name %></h1>
-<input type="text">
+<h1 id="channel_id" data-channel-id="<%= @channel.id %>" >歡迎來到<%= @channel.name %></h1>
+<input type="text" id="message">
 <button id="submit">送出</button>
+<h2>訊息列</h2>
+<ul id="messagelist"></ul>
