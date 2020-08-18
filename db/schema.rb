@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_16_103519) do
+ActiveRecord::Schema.define(version: 2020_08_18_021245) do
 
   create_table "channels", force: :cascade do |t|
     t.string "name", null: false
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2020_08_16_103519) do
   end
 
   create_table "messages", force: :cascade do |t|
-    t.text "contentm", null: false
+    t.text "content", null: false
     t.integer "user_id", null: false
     t.integer "channel_id", null: false
     t.datetime "created_at", precision: 6, null: false

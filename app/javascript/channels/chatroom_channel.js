@@ -22,15 +22,13 @@ document.addEventListener('turbolinks:load', () => {
   
     received(data) {
       // Called when there's incoming data on the websocket for this channel
-      // console.log(data)
-      const messageAdd = document.querySelector("#messagelist");
-      const messageInput = document.querySelector("input");
-      const newMessage = document.createElement("li");
-      messageInput.value
-      // newMessage.innerHTML = data.message
-      messageAdd.insertAdjacentElement("beforeend", newMessage);
-      // console.log(messageInput);
-
+      // console.log(data.message)
+      const msgBox = document.querySelector("#messagelist")
+      const newMsg = document.createElement("li")
+      newMsg.innerHTML = data.message
+      // console.log(newMsg)
+      msgBox.insertAdjacentElement("beforeend", newMsg)
+      
     }
   });
   

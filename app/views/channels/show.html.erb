@@ -1,5 +1,7 @@
 <h1 id="channel_id" data-channel-id="<%= @channel.id %>" >歡迎來到<%= @channel.name %></h1>
-<input type="text" id="message">
-<button id="submit">送出</button>
-<h2>訊息列</h2>
+<%= form_with(model: @message, url: channel_messages_path(@channel.id)) do |f| %>
+<%= f.text_field :content, placeholder: "輸入訊息" %>
+<%= f.submit "送出" %>
+<% end %>
+
 <ul id="messagelist"></ul>
