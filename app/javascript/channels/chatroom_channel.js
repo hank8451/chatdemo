@@ -27,10 +27,14 @@ document.addEventListener('turbolinks:load', () => {
       const newMsg = document.createElement("li")
       newMsg.innerHTML = data.message
       // console.log(newMsg)
-      msgBox.insertAdjacentElement("beforeend", newMsg)
+      msgBox.insertAdjacentElement("afterbegin", newMsg)
+      document.forms[0].reset()
+      // clearup()
+      // const submit = document.querySelector("input[type='submit']")
       
+      // console.log(document.forms[0])
     }
   });
-  
+
 })
 

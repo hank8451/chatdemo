@@ -4,4 +4,12 @@
 <%= f.submit "送出" %>
 <% end %>
 
-<ul id="messagelist"></ul>
+
+
+<ul id="messagelist">
+  <% @messages.reverse.each do |msg| %>
+  <li>
+    <%= msg.content %>
+  </li>
+  <% end %>
+</ul>

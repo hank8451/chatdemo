@@ -15,6 +15,7 @@ class ChannelsController < ApplicationController
   def show
     @channel = Channel.find(params[:id])
     @message = Message.new
+    @messages = Message.where(channel_id: params[:id])
   end
 
   private
